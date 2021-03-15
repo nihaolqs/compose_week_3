@@ -17,27 +17,56 @@ package com.example.androiddevchallenge.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.android.style.LetterSpacingSpanEm
+import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.TextUnit
 import androidx.compose.ui.unit.sp
+import com.example.androiddevchallenge.R
 
 // Set of Material typography styles to start with
+
+private val light = Font(R.font.nunito_sans_light, weight = FontWeight.W300)
+private val bold = Font(R.font.nunito_sans_bold, weight = FontWeight.W700)
+private val semibold = Font(R.font.nunito_sans_semi_bold, weight = FontWeight.W600)
+val fontFamily = FontFamily(fonts = listOf(light, semibold, bold))
+
 val typography = Typography(
-    body1 = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 16.sp
-    )
-        /* Other default text styles to override
-    button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.W500,
+
+    h1 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W700,
+        fontSize = 18.sp
+    ),
+    h2 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W700,
         fontSize = 14.sp
     ),
+    subtitle1 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W300,
+        fontSize = 16.sp,
+    ),
+    body1 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W300,
+        fontSize = 14.sp,
+    ),
+    body2 = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W300,
+        fontSize = 12.sp,
+    ),
+    button = TextStyle(
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W600,
+        fontSize = 14.sp,
+    ),
     caption = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Normal,
-        fontSize = 12.sp
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.W600,
+        fontSize = 12.sp,
     )
-    */
 )
